@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
+public class AddToCart {
 	
 	WebDriver driver;
 
@@ -15,10 +15,13 @@ public class Login {
 	   private WebElement txtPassword;
 	@FindBy(xpath="//input[@id='login-button']")
 	   private WebElement login;
+	@FindBy(xpath="//button[@id='add-to-cart-sauce-labs-backpack']")
+	   private WebElement btnAddToCart;
+	@FindBy(xpath="//a[@class='shopping_cart_link']")
+	   private WebElement btnCartLink;
 	
 	
-	
-	public Login(WebDriver driver) {
+	public AddToCart(WebDriver driver) {
 		this.driver = driver;
         PageFactory.initElements(driver, this); 
     }
@@ -30,8 +33,13 @@ public class Login {
 	public void enterPassword(String password) {
 		txtPassword.sendKeys("secret_sauce");
 	}
-	public void login() {
+	public void clicklogin() {
 		login.click();
 	}
-	
+	public void AddToCart() {
+		btnAddToCart.click();
+	}
+	public void CartLink() {
+		btnCartLink.click();
+	}
 }

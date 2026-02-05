@@ -6,3 +6,5 @@ Feature: Login
     And User enter username as "standard_user" and password as "secret_sauce"
     And Click login
     Then Page title should be "Swag Labs"
+    
+ 

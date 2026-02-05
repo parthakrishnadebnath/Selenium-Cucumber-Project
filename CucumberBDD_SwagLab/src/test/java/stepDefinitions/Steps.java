@@ -7,12 +7,14 @@ import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.AddToCart;
 import pageObjects.Login;
 
 public class Steps {
 	
 	public WebDriver driver;
 	public Login ln;
+	
 	
 	@Given("User launched Edge browser")
 	public void user_launched_edge_browser() {
@@ -50,5 +52,7 @@ public class Steps {
         Assert.assertEquals(actualTitle, "Swag Labs");
 		
 	}
+	
+	
 
 }
